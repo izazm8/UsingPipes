@@ -32,7 +32,6 @@ int main() {
         pid = fork();
         if(pid == 0) { 
             sum+=sumArray(arr, i*100);
-            printf("%d\t%d\t%d\n",i,i*100,sum);
             write(fd[i][1],&sum,sizeof(sum));
             exit(0);
         }
